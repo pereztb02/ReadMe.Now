@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-
+const generateMarkdown = require('./utils/generateMarkdown');
 // TODO: Create an array of questions for user input
 // const questions = [
    inquirer.prompt([
@@ -36,35 +36,38 @@ const fs = require('fs');
         name: "citations",
     },
     {
-        type: "input",
+        type: "list",
         message: "What license are you using?",
-        name: "licences",
+        name: "licenses",
+        choices: ["Apache", "GNU", "MIT", "None"]
     },
    ])
-   .then(({
-    title,
-    description,
-    table,
-    installation,
-    usage,
-    citations,
-    licences,
-   }))
-// ];
+   .then((data) => {
+    const fileName = `./user_readME/${data.title.toLowerCase().split(' ').join('')}.md`;
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile('README.md', 'Hello World', (err) => {
+    fs.writeFile(fileName,generateMarkdown(data), (err) => {
         // If there is any error in writing to the file, return
         if (err) {
             console.error(err)
             return
         }
-    
-}
-// Log this message if the file was written to successfully
+        // Log this message if the file was written to successfully
 console.log('wrote to file successfully')
-)};
+   })
+// ];
+
+// TODO: Create a function to write README file
+// function writeToFile(fileName, data) {
+//     fs.writeFile('README.md', 'Hello World', (err) => {
+//         // If there is any error in writing to the file, return
+//         if (err) {
+//             console.error(err)
+//             return
+//         }
+    
+// }
+
+});
 
 // TODO: Create a function to initialize app
 function init() {}
