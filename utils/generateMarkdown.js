@@ -52,9 +52,10 @@ function table(table){
     return ``
   }
 }
-// TODO: Create a function to generate markdown for README
+// function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+## ${renderLicenseBadge(data.licenses)}
 
 ## Description
 
@@ -74,7 +75,16 @@ ${data.usage}
 
 ${data.citations}
 
-## Lisences
+## Questions?
+<p>If you have questions or suggestions please contact me via email at </p>
+
+<${data.email}>
+
+<p>Check out my GitHub! </p>
+
+<${data.git}>
+
+## Licenses
 
 ${renderLicenseSection(data.licenses)}
 `;

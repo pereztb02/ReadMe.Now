@@ -41,7 +41,23 @@ const generateMarkdown = require('./utils/generateMarkdown');
         name: "licenses",
         choices: ["Apache", "GNU", "MIT", "None"]
     },
+    {
+        type: "input",
+        message: "How can we test your app?",
+        name: "test",
+    },
+    {
+        type: "input",
+        message: "Add your GitHub link",
+        name: "git",
+    },
+    {
+        type: "input",
+        message: "Add you e-mail address",
+        name: "email",
+    },
    ])
+   //turns title into filename then drops it in user_readMe file
    .then((data) => {
     const fileName = `./user_readME/${data.title.toLowerCase().split(' ').join('')}.md`;
 
