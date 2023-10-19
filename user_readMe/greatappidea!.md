@@ -1,33 +1,32 @@
-# ReadME Generator
+# Great app idea!
 ## ![Static Badge](https://img.shields.io/badge/License-MIT-yellow)
 
 ## Description
 
-Command line app used to generate professional ReadMe's
+Does amazing things like my taxes
 
 
 
 ## Installation
 
-Requires Inquirer package.
+Have a web browser. Requires inquirer package
 
 ## Usage
 
-See below:
-https://watch.screencastify.com/v/jzO5QO8JaJrLe3drizQl
+Install inquirer
 
 ## Citations
 
-Git hub for starter code: https://github.com/coding-boot-camp/potential-enigma
+Me, My self, et al.
 
 ## Questions?
 <p>If you have questions or suggestions please contact me via email at </p>
 
-<pereztb03@gmail.com>
+<Me23@gmail.com>
 
 <p>Check out my GitHub! </p>
 
-<https://github.com/pereztb02?tab=repositories>
+<Me@github.com>
 
 ## Licenses
 
